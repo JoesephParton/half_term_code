@@ -12,6 +12,15 @@ class Digit_Seperator():
 
         return result[::-1]
 
-dg = Digit_Seperator(input("Number to seperate: "))
-print(dg.digit_seperator())
-
+running = True
+while running:
+    digit = input("Number to seperate: ")
+    if digit.isnumeric() is True:
+        dg = Digit_Seperator(digit)
+        print(dg.digit_seperator())
+    else:
+        if digit == "X":
+            print("Exit")
+            running = False
+        else:
+            print("incorrect Input")
